@@ -12,7 +12,8 @@ int main()
     system("cls");
 
     // ОБъявление переменных
-    char input[2][1001];
+    const int input_max_size = 2000;
+    char input[2][input_max_size];
     int max_size = 0;
     int cur_num;
     int zero_count = -1;
@@ -23,10 +24,10 @@ int main()
 
     // Че то вводим
     cout << "Введите БОЛЬШОЕ число: " << endl;
-    cin.getline(input[0], 1001);
+    cin.getline(input[0], input_max_size);
 
     cout << "Введите второе БОЛЬШОЕ число: " << endl;
-    cin.getline(input[1], 1001);
+    cin.getline(input[1], input_max_size);
 
     // Че то делаем
     if (strlen(input[0]) == strlen(input[1]))
@@ -40,8 +41,8 @@ int main()
     };
 
     // Объявление массива результата
-    char result[1000];
-    for (int i = 0; i < 1000; i++)
+    char result[input_max_size + 1];
+    for (int i = 0; i < input_max_size + 1; i++)
     {
         result[i] = '0';
     }
