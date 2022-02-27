@@ -11,9 +11,10 @@ int main()
     system("chcp 65001");
     system("cls");
 
-    // ОБъявление переменных
+    // ОБъявление переменныхz
     const int input_max_size = 2000;
-    char input[2][input_max_size];
+    char input_1[input_max_size];
+    char input_2[input_max_size];
     int max_size = 0;
     int cur_num;
     int zero_count = -1;
@@ -24,20 +25,20 @@ int main()
 
     // Че то вводим
     cout << "Введите БОЛЬШОЕ число: " << endl;
-    cin.getline(input[0], input_max_size);
+    cin.getline(input_1, input_max_size);
 
     cout << "Введите второе БОЛЬШОЕ число: " << endl;
-    cin.getline(input[1], input_max_size);
+    cin.getline(input_2, input_max_size);
 
     // Че то делаем
-    if (strlen(input[0]) == strlen(input[1]))
+    if (strlen(input_1) == strlen(input_2))
     {
-        max_size = 1 + strlen(input[0]);
+        max_size = 1 + strlen(input_1);
     }
     else
     {
-        max_size = 1 + strlen(input[0]) * (strlen(input[0]) > strlen(input[1])) + strlen(input[1]) * (strlen(input[1]) > strlen(input[0]));
-        which_big = (strlen(input[1]) > strlen(input[0]));
+        max_size = 1 + strlen(input_1) * (strlen(input_1) > strlen(input_2)) + strlen(input_2) * (strlen(input_2) > strlen(input_1));
+        which_big = (strlen(input_2) > strlen(input_1));
     };
 
     // Объявление массива результата
@@ -52,9 +53,9 @@ int main()
     int dif_size;
     if (which_big)
     {
-        dif_size = strlen(input[1]) - strlen(input[0]);
+        dif_size = strlen(input_2) - strlen(input_1);
     } else {
-        dif_size = strlen(input[0]) - strlen(input[1]);
+        dif_size = strlen(input_1) - strlen(input_2);
     }
     
     
@@ -65,7 +66,7 @@ int main()
 
         for (int i = max_size; i > dif_size + 1; i--)
         {
-            cur_num = input[1][i-2] + input[0][i - dif_size - 2] + result[i] - 144;
+            cur_num = input_2[i-2] + input_1[i - dif_size - 2] + result[i] - 144;
             result[i] = char(cur_num % 10) + 48;
             result[i-1] += char(cur_num / 10);
         }
@@ -74,7 +75,7 @@ int main()
 
         for (int i = dif_size + 1; i > 1; i--)
         {
-            cur_num = input[1][i-2] + result[i] - 96;
+            cur_num = input_2[i-2] + result[i] - 96;
             result[i] = char(cur_num % 10) + 48;
             result[i-1] += char(cur_num / 10);
         }
@@ -83,7 +84,7 @@ int main()
 
         for (int i = max_size; i > dif_size + 1; i--)
         {
-            cur_num = input[0][i-2] + input[1][i - dif_size - 2] + result[i] - 144;
+            cur_num = input_1[i-2] + input_2[i - dif_size - 2] + result[i] - 144;
             result[i] = char(cur_num % 10) + 48;
             result[i-1] += char(cur_num / 10);
         }
@@ -92,7 +93,7 @@ int main()
 
         for (int i = dif_size + 1; i > 1; i--)
         {
-            cur_num = input[0][i-2] + result[i] - 96;
+            cur_num = input_1[i-2] + result[i] - 96;
             result[i] = char(cur_num % 10) + 48;
             result[i-1] += char(cur_num / 10);
         }
