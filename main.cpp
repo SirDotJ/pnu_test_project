@@ -21,7 +21,7 @@ int main()
     
 
     // 0 - первый больше или одинаковы, 1 - второй больше
-    bool which_big = 0;
+    bool fir_big_or_eq = 0;
 
     // Че то вводим
     cout << "Введите БОЛЬШОЕ число: " << endl;
@@ -38,7 +38,7 @@ int main()
     else
     {
         max_size = 1 + strlen(input_1) * (strlen(input_1) > strlen(input_2)) + strlen(input_2) * (strlen(input_2) > strlen(input_1));
-        which_big = (strlen(input_2) > strlen(input_1));
+        fir_big_or_eq = (strlen(input_2) > strlen(input_1));
     };
 
     // Объявление массива результата
@@ -51,7 +51,7 @@ int main()
 
     // Вычисление разницы в размере двух чисел
     int dif_size;
-    if (which_big)
+    if (fir_big_or_eq)
     {
         dif_size = strlen(input_2) - strlen(input_1);
     } else {
@@ -61,7 +61,7 @@ int main()
     
     // Че то делаем опять
     
-    if (which_big)
+    if (fir_big_or_eq)
     {
 
         for (int i = max_size; i > dif_size + 1; i--)
