@@ -12,6 +12,7 @@ int main()
     system("cls");
 
     // ОБъявление переменныхz
+    int input_max_size;
     const int input_max_size = 2000;
     char input_1[input_max_size];
     char input_2[input_max_size];
@@ -59,11 +60,13 @@ int main()
     }
     
     
-    // Че то делаем опять
+    // Начинаем сложение в зависимости от того, кто больше кого
     
     if (fir_big_or_eq)
     {
+        // Первый больше или равен второму
 
+        // Проходим через все символы, пока не дойдём до конца меньшего, проводим сложение и перенос
         for (int i = max_size; i > dif_size + 1; i--)
         {
             cur_num = input_2[i-2] + input_1[i - dif_size - 2] + result[i] - 144;
@@ -71,8 +74,7 @@ int main()
             result[i-1] += char(cur_num / 10);
         }
 
-
-
+        // Добавляем остальные символы через все оставшиеся символы, учитывая перенос
         for (int i = dif_size + 1; i > 1; i--)
         {
             cur_num = input_2[i-2] + result[i] - 96;
@@ -82,6 +84,9 @@ int main()
 
     } else {
 
+        // Второй больше первого
+
+        // Проходим через все символы, пока не дойдём до конца меньшего, проводим сложение и перенос
         for (int i = max_size; i > dif_size + 1; i--)
         {
             cur_num = input_1[i-2] + input_2[i - dif_size - 2] + result[i] - 144;
@@ -90,7 +95,7 @@ int main()
         }
 
 
-
+        // Добавляем остальные символы через все оставшиеся символы, учитывая перенос
         for (int i = dif_size + 1; i > 1; i--)
         {
             cur_num = input_1[i-2] + result[i] - 96;
@@ -111,7 +116,7 @@ int main()
     }
     
 
-    // Че то выводим
+    // Выводим результат
     cout << "Результат сложения двух введенных чисел: " << endl;
     for (int i = 0; i < max_size - zero_count; i++)
     {
