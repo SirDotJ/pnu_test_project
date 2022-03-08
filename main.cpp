@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string.h>
 #include <math.h>
+#include "lib.h"
 
 using namespace std;
 
@@ -25,11 +26,7 @@ int main()
     bool fir_big_or_eq = 0;
 
     // Че то вводим
-    cout << "Введите БОЛЬШОЕ число: " << endl;
-    cin.getline(input_1, input_max_size);
-
-    cout << "Введите второе БОЛЬШОЕ число: " << endl;
-    cin.getline(input_2, input_max_size);
+    get_numbers(input_1, input_2, max_size);
 
     // Че то делаем
     if (strlen(input_1) == strlen(input_2))
@@ -116,15 +113,10 @@ int main()
     }
     
 
-    // Выводим результат
-    cout << "Результат сложения двух введенных чисел: " << endl;
-    for (int i = 0; i < max_size - zero_count; i++)
-    {
-        cout << result[i];
-    }
-    cout << endl;
+    // Че то выводим
+    out_result(result, max_size, zero_count);
     
     // Конец программы
-    system("pause");
+    pause_prog();
     return 0;
 }
