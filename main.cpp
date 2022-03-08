@@ -19,7 +19,7 @@ int main()
     char input_2[input_max_size];
     int max_size = 0;
     int cur_num;
-    int zero_count = -1;
+    int zero_num_count = -1;
     
 
     // 0 - первый больше или одинаковы, 1 - второй больше
@@ -109,12 +109,12 @@ int main()
         {
             result[i] = result[i+1];
         }
-        zero_count++;
+        zero_num_count++;
     }
     
 
     // Выводим результат:
-    out_result(result, max_size, zero_count);
+    out_result(result, max_size, zero_num_count);
     
     // Конец программы
     pause_prog();
