@@ -113,7 +113,7 @@ int main()
     }
     
 
-    // Че то выводим
+    // Выводим результат:
     out_result(result, max_size, zero_count);
     
     // Конец программы
