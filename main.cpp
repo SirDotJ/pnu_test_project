@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string.h>
 #include <math.h>
-#include "lib.h"
+#include "lib.cpp"
 
 using namespace std;
 
