@@ -1,3 +1,8 @@
+/** @defgroup group1 The First Group
+ *  This is the first group
+ *  @{
+ */
+
 // Программа берёт два числа гигантских размеров и складывает их между собой (больше чем длина unsigned long int)
 #include <iostream>
 #include <string.h>
@@ -5,6 +10,21 @@
 #include "lib.cpp"
 
 using namespace std;
+
+/** @brief class Number in group1
+ * 
+ * 
+ * 
+ * future builds hope to store input numbers as class
+ */
+class Number {};
+/** 
+ * Main of function, entry point
+ * 
+ * In execution the function will ask to input two big numbers size of const input_max_size
+ * and will output the result of their sum
+ * @return {int} exitcode - if return 0, then program was executed succesfully
+ */
 
 int main()
 {
@@ -120,3 +140,5 @@ int main()
     pause_prog();
     return 0;
 }
+
+/** @} */ // end of group1
