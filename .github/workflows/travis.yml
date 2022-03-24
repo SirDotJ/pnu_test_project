@@ -1,26 +1,25 @@
-name: CI
+name: Prog
 
-on:
+on: 
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
-   
+
   workflow_dispatch:
-   
+
 jobs:
   build:
     runs-on: windows-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v1
-    
-      - name: Check files existence
+
+      - name: Check file existence
         id: check_files
         uses: andstor/file-existence-action@v1
         with:
-          files: "test_travis.txt"
-        
+          files: "prog.txt"
+
       - name: File exists
-        if: steps.check_files.output.files_exists == 'true'
-        run: echo Required files exist
+        if: steps.check_files.outputs.files_exists == 'true'
+        # Only runs if all of the files exists
+        run: echo Required File Exists!
