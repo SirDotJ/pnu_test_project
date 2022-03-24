@@ -1,6 +1,6 @@
 name: Prog
 
-on: 
+on:
   push:
     branches: [ master ]
 
@@ -20,6 +20,6 @@ jobs:
           files: "prog.txt"
 
       - name: File exists
-        if: steps.check_files.outputs.files_exists == 'false'
+        if: steps.check_files.outputs.files_exists == 'true'
         # Only runs if all of the files exists
         run: echo All files exists!
