@@ -10,10 +10,7 @@ on:
    
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubunti-latest, windows-latest]
+    runs-on: windows_latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v1
