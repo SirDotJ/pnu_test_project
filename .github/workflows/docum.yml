@@ -10,6 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: DocumentationCreate
+        uses: mattnotmitt/doxygen-action@v1.9.2
+        with: 
+          doxyfile-path: './Doxyfile'
+      - name: upload result
+        uses: actions/upload-artifact@v2
+        with:
+          path: docum
+          name: Doxygen
       - name: Push to IO repo
         uses: cpina/github-action-push-to-another-repository@master
         env:
