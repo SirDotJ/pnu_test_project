@@ -1,0 +1,116 @@
+\hypertarget{group__group2}{}\doxysection{The Second Group}
+\label{group__group2}\index{The Second Group@{The Second Group}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__group2_ga275a6c79179e1db482dd6455effd0f0f}{pause\+\_\+prog}} ()
+\begin{DoxyCompactList}\small\item\em Function \mbox{\hyperlink{group__group2_ga275a6c79179e1db482dd6455effd0f0f}{pause\+\_\+prog()}} puts the program on pause until the user hits any button on their keyboard. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group2_gad01d2574f84dac5ce90554bc282f3a6e}{out\+\_\+result}} (char $\ast$result, int max\+\_\+size, int zero\+\_\+count)
+\begin{DoxyCompactList}\small\item\em Function out\+\_\+result outputs given char pointer contents into the terminal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group2_gac672114166d1fd8faacad1f5e9379504}{get\+\_\+numbers}} (char $\ast$input\+\_\+1, char $\ast$input\+\_\+2, int \mbox{\hyperlink{group__group2_ga7d57088541ad336d19dfcf8b2438d5a3}{input\+\_\+max\+\_\+size}})
+\begin{DoxyCompactList}\small\item\em Function get\+\_\+numbers gets tells the user to input two big numbers and reads users input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group2_ga7d57088541ad336d19dfcf8b2438d5a3}\label{group__group2_ga7d57088541ad336d19dfcf8b2438d5a3}} 
+const int {\bfseries input\+\_\+max\+\_\+size} = 2000
+\begin{DoxyCompactList}\small\item\em const input\+\_\+max\+\_\+size -\/ определяет максимальное количество входящих цифр в введенные числа. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the second group 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__group2_gac672114166d1fd8faacad1f5e9379504}\label{group__group2_gac672114166d1fd8faacad1f5e9379504}} 
+\index{The Second Group@{The Second Group}!get\_numbers@{get\_numbers}}
+\index{get\_numbers@{get\_numbers}!The Second Group@{The Second Group}}
+\doxysubsubsection{\texorpdfstring{get\_numbers()}{get\_numbers()}}
+{\footnotesize\ttfamily void get\+\_\+numbers (\begin{DoxyParamCaption}\item[{char $\ast$}]{input\+\_\+1,  }\item[{char $\ast$}]{input\+\_\+2,  }\item[{int}]{input\+\_\+max\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Function get\+\_\+numbers gets tells the user to input two big numbers and reads users input. 
+
+get\+\_\+numbers function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \{char$\ast$\}} & $\ast$input\+\_\+1 -\/ first char pointer the user will enter \\
+\hline
+{\em \{char$\ast$\}} & $\ast$input\+\_\+2 -\/ second char pointer the user will enter \\
+\hline
+{\em input\+\_\+max\+\_\+size} & -\/ the max ammount of characters user can enter\\
+\hline
+\end{DoxyParams}
+Details about get\+\_\+numbers function.
+
+A example function. 
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+1} & first char pointer to input \\
+\hline
+{\em input\+\_\+2} & second char pointer to input \\
+\hline
+{\em input\+\_\+max\+\_\+size} & an integer ammount of characters that can be input into a pointer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & parameter is out of range. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{group__group2_gad01d2574f84dac5ce90554bc282f3a6e}\label{group__group2_gad01d2574f84dac5ce90554bc282f3a6e}} 
+\index{The Second Group@{The Second Group}!out\_result@{out\_result}}
+\index{out\_result@{out\_result}!The Second Group@{The Second Group}}
+\doxysubsubsection{\texorpdfstring{out\_result()}{out\_result()}}
+{\footnotesize\ttfamily void out\+\_\+result (\begin{DoxyParamCaption}\item[{char $\ast$}]{result,  }\item[{int}]{max\+\_\+size,  }\item[{int}]{zero\+\_\+count }\end{DoxyParamCaption})}
+
+
+
+Function out\+\_\+result outputs given char pointer contents into the terminal. 
+
+out\+\_\+result function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \{char$\ast$\}} & $\ast$result -\/ The char pointer function will print out \\
+\hline
+{\em max\+\_\+size} & -\/ The max size a given char pointer can be \\
+\hline
+{\em zero\+\_\+count} & -\/ the ammount of zeros at the end of the char massive (which are not counting towards its value)\\
+\hline
+\end{DoxyParams}
+Details about out\+\_\+result function.
+
+A example function. 
+\begin{DoxyParams}{Parameters}
+{\em result} & char pointer to output. \\
+\hline
+{\em max\+\_\+size} & an integer.\+amount of max characters that can be output \\
+\hline
+{\em zero\+\_\+count} & an integer amount of.\+0 which dont count to poionter value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & parameter is out of range. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{group__group2_ga275a6c79179e1db482dd6455effd0f0f}\label{group__group2_ga275a6c79179e1db482dd6455effd0f0f}} 
+\index{The Second Group@{The Second Group}!pause\_prog@{pause\_prog}}
+\index{pause\_prog@{pause\_prog}!The Second Group@{The Second Group}}
+\doxysubsubsection{\texorpdfstring{pause\_prog()}{pause\_prog()}}
+{\footnotesize\ttfamily void pause\+\_\+prog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function \mbox{\hyperlink{group__group2_ga275a6c79179e1db482dd6455effd0f0f}{pause\+\_\+prog()}} puts the program on pause until the user hits any button on their keyboard. 
+
+pause\+\_\+prog function.
+
+Details about pause\+\_\+prog function.
+
+pause program.. 
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & parameter is out of range.. \\
+\hline
+\end{DoxyExceptions}
