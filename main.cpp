@@ -3,7 +3,6 @@
  *  @{
  */
 
-// Программа берёт два числа гигантских размеров и складывает их между собой (больше чем длина unsigned long int)
 #include <iostream>
 #include <string.h>
 #include <math.h>
