@@ -1,0 +1,22 @@
+name: Make Doxygen Docum
+on: 
+  push:
+    branches: [ master ]
+
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Push to IO repo
+        uses: cpina/github-action-push-to-another-repository@master
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: 'documentation'
+          destination-github-username: 'SirDotJ'
+          destination-repository-name: 'pnu_test_project.io'
+          user-email: 2020102045@pnu.edu.ru
+          target-branch: master
