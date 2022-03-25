@@ -24,7 +24,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-directory: 'doxygen_docum'
+          source-directory: 'docum'
           destination-github-username: 'SirDotJ'
           destination-repository-name: 'pnu_test_project.io'
           user-email: 2020102045@pnu.edu.ru
