@@ -28,4 +28,4 @@ jobs:
           destination-github-username: 'SirDotJ'
           destination-repository-name: 'pnu_test_project_io'
           user-email: 2020102045@pnu.edu.ru
-          target-branch: master
+          target-branch: main
