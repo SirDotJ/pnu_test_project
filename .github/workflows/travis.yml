@@ -22,3 +22,16 @@ jobs:
       - name: File exists
         if: steps.check_files.output.files_exists == 'true'
         run: echo Required files exist
+
+      - name: Compile Prog
+        run: |
+          sudo apt-get install g++-10
+          g++ -dumpversion
+          g++ main.cpp -o launch.exe
+          ls
+          
+      - name: Make exe
+        uses: actions/upload-artifact@v2
+        with:
+          name: Result
+          path: launch.exe
