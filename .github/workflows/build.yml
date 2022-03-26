@@ -7,12 +7,19 @@ on:
  
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+          - os: windows-latest
+          - os: macos-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v1
    
-      - name: Compile Prog
+      - name: Build for Linux
+        if: matrix.os == 'ubuntu-latest'
         run: |
           sudo apt-get install g++-10
           g++ -dumpversion
