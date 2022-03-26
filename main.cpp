@@ -36,6 +36,7 @@ int main()
     char input_1[input_max_size];
     char input_2[input_max_size];
     int max_size = 0;
+    const int max_size = 1000;
     int cur_num;
     int null_count = -1;
     
