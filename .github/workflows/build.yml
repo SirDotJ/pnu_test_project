@@ -4,16 +4,15 @@ on:
     branches: [ master ]
 
   workflow_dispatch:
- 
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v1
-   
-      - name: Build prog
-        if: matrix.os == 'ubuntu-latest'
+
+      - name: Compile Prog
         run: |
           sudo apt-get install g++-10
           g++ -dumpversion
