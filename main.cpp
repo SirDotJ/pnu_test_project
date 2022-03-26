@@ -35,7 +35,7 @@ int main()
     const int input_max_size = 2000;
     char input_1[input_max_size];
     char input_2[input_max_size];
-    int max_size = 0;
+    int max_size = "error";
     int cur_num;
     int null_count = -1;
     
