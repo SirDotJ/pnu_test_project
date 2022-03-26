@@ -32,7 +32,6 @@ int main()
     system("cls");
 
     // ОБъявление переменныхz
-    int input_max_size;
     const int input_max_size = 2000;
     char input_1[input_max_size];
     char input_2[input_max_size];
