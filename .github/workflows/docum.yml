@@ -20,7 +20,7 @@ jobs:
           path: doxygen_docum
           name: Doxygen
       - name: Push to IO repo
-        uses: cpina/github-action-push-to-another-repository@master
+        uses: cpina/github-action-push-to-another-repository@v1.4.1
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
